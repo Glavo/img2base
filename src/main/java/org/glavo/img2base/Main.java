@@ -13,6 +13,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.*;
+import java.net.URL;
 import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -56,7 +57,12 @@ public final class Main {
         window.setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setLocationByPlatform(true);
-        window.setTitle("Image to Base64");
+        window.setTitle("Image to Base64 by Glavo");
+
+        final URL logo = Main.class.getResource("logo.jpg");
+        if (logo != null) {
+            window.setIconImage(new ImageIcon(logo).getImage());
+        }
 
         final JLabel messageBar = new JLabel("Drag in the picture for conversion, and click the right mouse button to copy");
         window.add(BorderLayout.SOUTH, messageBar);

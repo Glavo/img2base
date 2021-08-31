@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.glavo"
-version = "1.1"
+version = "2.0"
 
 
 val img2baseMainClass = "org.glavo.img2base.Main"
@@ -33,6 +33,8 @@ launch4j {
     jreMinVersion = "1.8"
     bundledJrePath = "%JAVA_HOME%"
     bundledJreAsFallback = true
+    downloadUrl = "https://adoptopenjdk.net/"
+    icon = "$projectDir/logo.ico"
 }
 
 repositories {
