@@ -13,3 +13,7 @@ Right click to copy the text to the clipboard.
 Middle click to clear the text.
 
 JRE 8 or later is required.
+
+![](docs/1.png)
+
+![](docs/2.png)
