@@ -2,6 +2,7 @@ package org.glavo.img2base;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.StringSelection;
@@ -64,6 +65,7 @@ public final class Main {
         final JTextArea area = new JTextArea();
         area.setEditable(false);
         area.setLineWrap(true);
+        ((DefaultCaret) area.getCaret()).setUpdatePolicy(DefaultCaret.NEVER_UPDATE);
         area.setTransferHandler(new TransferHandler() {
             @Override
             public boolean canImport(TransferSupport support) {

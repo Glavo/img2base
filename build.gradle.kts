@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "org.glavo"
-version = "1.0"
+version = "1.1"
 
 
 val img2baseMainClass = "org.glavo.img2base.Main"
